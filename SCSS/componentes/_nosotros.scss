@@ -1,0 +1,71 @@
+.nosotros-main-container {
+  @include flexbox(flex, null, null, center);
+  .nosotros-div-main-container {
+    width: 1200px;
+    @include flexbox(flex, null, null, center);
+    margin: 30px;
+    border-top: 1px solid nth($colores, 1);
+    border-bottom: 1px solid nth($colores, 1);
+    div {
+      p {
+        font-weight: 200;
+        @include mq414 {
+            font-weight: 200;
+    font-size: 15px;
+        }
+      }
+    }
+    .nosotros-main-mision {
+      padding: 40px;
+      h1 {
+        font-size: 30px;
+        @include mq414 {
+            font-size: 18px;
+    margin-bottom: 25px;
+        }
+      }
+      p {
+        span {
+          font-style: italic;
+          font-weight: bold;
+        }
+      }
+    }
+    .nosotros-main-vision {
+      padding: 40px;
+      h2 {
+        margin-top: -20px;
+      }
+      p {
+        span {
+          font-style: italic;
+          font-weight: bold;
+        }
+      }
+      ul li {
+        font-weight: 200;
+      }
+      .nosotros-main-br2 {
+        @include mq990 {
+            display: none;
+        }
+        @include mq485 {
+            display: none;
+        }
+        @include mq414 {
+            display: none;
+        }
+      }
+      @include mq990 {
+        margin-top: -40px;
+      }
+    }
+    @include mq990 {
+      width: 700px;
+      @include flexbox(flex, column, null, center);
+      margin: 30px;
+      border-top: 1px solid nth($colores, 1);
+      border-bottom: 1px solid nth($colores, 1);
+    }
+  }
+}

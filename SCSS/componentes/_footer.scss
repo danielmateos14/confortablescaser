@@ -1,0 +1,163 @@
+footer {
+  background-color: nth($colores, 1);
+  @include flexbox(flex, null, null, center);
+  .footer-main {
+    background-color: nth($colores, 1);
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row: auto 100px;
+    grid-template-areas:
+      "sugerencias redes ubicacion"
+      "copyright copyright copyright";
+    h2 {
+      font-size: medium;
+      margin-bottom: 5px;
+      color: nth($colores, 5);
+    }
+    .sugerencias {
+      grid-area: sugerencias;
+      @include flexbox(flex, column, center, start);
+      padding: 10px;
+      img {
+        width: 70px;
+        height: 70px;
+        @include mq650 {
+        margin: 10px;
+        }
+      }
+      input {
+        width: 110px;
+        background-color: green;
+        border-radius: 7px;
+        color: nth($colores, 5);
+        font-size: 14px;
+        padding: 5px;
+        margin: 15px;
+        &:hover {
+          background-color: nth($colores, 4);
+          cursor: pointer;
+        }
+        @include mq990 {
+          width: 90px;
+          font-size: 11px;
+        }
+      }
+      @include mq990 {
+        width: 160px;
+        height: 60px;
+      }
+      @include mq740 {
+        width: 100%;
+        height: 60px;
+      }
+      @include mq650 {
+        margin-bottom: 110px;
+      }
+    }
+    .redes {
+      grid-area: redes;
+      @include flexbox(flex, column, center, null);
+      padding: 10px;
+      margin-right: 80px;
+      div {
+        @include flexbox(flex, null, null, center);
+      }
+      img {
+        display: inline-block;
+        width: 80px;
+        padding: 5px;
+        @include mq990 {
+          width: 60px;
+          padding: 5px;
+        }
+        @include mq650 {
+          width: 70px;
+          padding: 5px;
+        }
+      }
+      @include mq990 {
+        margin-right: 10px;
+      }
+      @include mq740 {
+        margin-top: 70px;
+      }
+      @include mq650 {
+        margin: 20px;
+      }
+    }
+    .ubicacion {
+      grid-area: ubicacion;
+      padding: 10px;
+      iframe {
+        width: 300px;
+        height: 150px;
+        @include mq990 {
+          width: 300px;
+          height: 150px;
+        }
+        @include mq740 {
+          margin: 10px;
+        }
+        @include mq500 {
+          margin: 10px;
+        }
+      }
+      p {
+        color: nth($colores, 5);
+        @include mq500 {
+          width: 300px;
+        }
+      }
+      @include mq990 {
+        width: 300px;
+      }
+      @include mq740 {
+        width: 100%;
+        @include flexbox(flex, column, center, null);
+      }
+      @include mq500 {
+        width: 100%;
+        @include flexbox(flex, column, center, null);
+        padding: 50px;
+      }
+    }
+    .copyright {
+      grid-area: copyright;
+      font-size: 15px;
+      background-color: nth($colores, 1);
+      color: nth($colores, 5);
+      text-align: center;
+      padding-top: 5px;
+    }
+
+    @include mq990 {
+      width: 80%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row: 100px 100px 100px;
+      grid-template-areas:
+        "sugerencias redes"
+        "redes redes"
+        "copyright copyright";
+    }
+    @include mq740 {
+      width: 80%;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row: 100px 100px 100px;
+      grid-template-areas:
+        "sugerencias ubicacion"
+        "redes ubicacion"
+        "copyright copyright";
+    }
+    @include mq650 {
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-row: 100px 100px 100px 100px;
+      grid-template-areas:
+        "redes redes"
+        "sugerencias sugerencias"
+        "ubicacion ubicacion"
+        "copyright copyright";
+    }
+  }
+}

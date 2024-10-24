@@ -1,0 +1,82 @@
+.producto-main {
+  @include flexbox(flex, column, center, center);
+  h1 {
+    grid-area: titulo;
+    text-align: center;
+    font-size: 60px;
+    @include mq850 {
+      grid-area: titulo;
+      text-align: center;
+      font-size: 40px;
+    }
+  }
+  .p {
+    background-color: nth($colores, 2);
+    width: 800px;
+    @include flexbox(flex, null, null, null);
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px nth($colores, 6);
+    img {
+      padding: 10px;
+      width: 250px;
+      height: 150px;
+      @include mq650 {
+        width: 200px;
+      }
+      @include mq560 {
+        width: 170px;
+      }
+      @include mq414 {
+        width: 250px;
+      }
+    }
+    .p-tarjeta {
+      width: 100%;
+      @include flexbox(flex, column, null, null);
+      padding: 10px;
+      h2 {
+        @include mq740 {
+          font-size: 25px;
+        }
+        @include mq650 {
+          font-size: 23px;
+        }
+        @include mq560 {
+          font-size: 20px;
+        }
+      }
+      p {
+        @include mq850 {
+          text-align: start;
+        }
+        @include mq560 {
+          font-size: 12px;
+        }
+        @include mq375 {
+          width: 290px;
+          padding: 10px;
+        }
+      }
+    }
+    @include mq850 {
+      width: 700px;
+    }
+    @include mq740 {
+      width: 600px;
+    }
+    @include mq650 {
+      width: 500px;
+    }
+    @include mq560 {
+      width: 400px;
+    }
+    @include mq414 {
+      width: 350px;
+      @include flexbox(null, column, center, center);
+    }
+    @include mq375 {
+      width: 300px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+header {
+    nav{
+        div {
+            a {
+                img {
+                    width: 100px;
+                    margin-right: 300px;
+                    @include mq485 {
+                        width: 100px;
+    margin-right: 100px;
+                    }
+                  }
+            }
+        }
+    } 
+  
+    nav {
+        div {
+            ul {
+                li {
+                    a {
+                        color: nth($colores, 5) !important;
+                        font-size: 17px !important;
+                        &:hover {
+                            color: nth($colores, 4) !important;
+                        }
+                }
+            }
+        }
+    }
+  }
+  
+}

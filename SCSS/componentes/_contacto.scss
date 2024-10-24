@@ -1,0 +1,210 @@
+//Hero
+.contacto-hero-section {
+  @extend %flex-colum;
+  .contacto-hero {
+    width: 100%;
+    position: relative;
+    background-color: nth($colores, 1);
+    height: calc(100vh - 100px);
+    display: flex;
+    @extend %flex-colum;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      object-fit: cover;
+      display: flex;
+      @extend %flex-colum;
+    }
+    .contacto-hero-text-container {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      display: flex;
+      @extend %flex-colum;
+      color: nth($colores, 2);
+      font-size: 30px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+  }
+}
+// Main
+.contacto-main-container {
+  @include flexbox (flex, null, start, space-evenly);
+  padding: 20px;
+  .contacto-main-information {
+    width: 600px;
+    h1 {
+      font-size: 35px;
+      padding: 10px;
+      @include mq1100 {
+        text-align: center;
+      }
+      @include mq740 {
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    hr {
+      width: 50px;
+      margin-left: 10px;
+      margin-top: -10px;
+      border: 2px solid nth($colores, 4);
+    }
+    h2 {
+      font-size: 24px;
+      color: nth($colores, 4);
+      padding: 10px;
+      @include mq1100 {
+        text-align: center;
+      }
+      @include mq740 {
+        text-align: center;
+      }
+    }
+    p {
+      padding: 10px;
+      font-weight: 100;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+    .contacto-main-information-loca {
+      display: flex;
+      padding: 10px;
+      p {
+        font-size: large;
+      }
+    }
+    .contacto-main-information-whatsapp {
+      display: flex;
+      padding: 10px;
+      p {
+        font-size: larger;
+      }
+    }
+    .contacto-main-information-map {
+      display: flex;
+      justify-content: center;
+      iframe {
+        width: 600px;
+        height: 250px;
+      }
+      @include mq1100 {
+        display: none;
+      }
+    }
+    @include mq1100 {
+      width: 90%;
+    }
+    @include mq650 {
+      width: 90%;
+    }
+    @include mq500 {
+      width: 90%;
+    }
+  }
+  .contacto-main-form {
+    width: 500px;
+    @include flexbox (flex, column, null, start);
+    h2 {
+      font-size: 35px;
+      margin-top: 25px;
+      @include mq500 {
+        font-size: 25px;
+      }
+    }
+    form {
+      @include flexbox(flex, column, null, null);
+      padding: 10px;
+      label {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 2px;
+      }
+      span {
+        color: nth($colores, 4);
+        padding: 3px;
+      }
+      input {
+        width: 400px;
+        height: 35px;
+        border: 1.5px solid rgb(221, 221, 221);
+        padding-left: 5px;
+        &::placeholder {
+          color: lightgray;
+        }
+        &:focus {
+          outline: none;
+        }
+        @include mq500 {
+          width: 300px;
+        }
+        @include mq375 {
+          width: 250px;
+        }
+      }
+      textarea {
+        width: 400px;
+        height: 150px;
+        border: 1.5px solid nth($colores, 6);
+        resize: none;
+        padding-left: 5px;
+        padding-top: 5px;
+        margin-bottom: 20px;
+        &::placeholder {
+          color: lightgray;
+        }
+        &:focus {
+          outline: none;
+        }
+        @include mq500 {
+          width: 300px;
+        }
+        @include mq375 {
+          width: 250px;
+        }
+      }
+    }
+    .contacto-main-form-button-container {
+      width: 84%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      input {
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 150px;
+        height: 40px;
+        border: 1px solid nth($colores, 4);
+        color: nth($colores, 4);
+        margin-bottom: 30px;
+        cursor: pointer;
+        &:hover {
+          background-color: nth($colores, 4);
+          color: nth($colores, 2);
+        }
+        &:active {
+          transform: scale(0.95);
+          background-color: rgb(100, 0, 15);
+          transition: transform 0.1s ease;
+        }
+      }
+    }
+    @include mq1100 {
+      align-items: center;
+    }
+    @include mq500 {
+      width: 90%;
+    }
+  }
+  @include mq1100 {
+    @include flexbox(null, column-reverse, center, null);
+  }
+}

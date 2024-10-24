@@ -1,0 +1,115 @@
+.clientes-main-container {
+    @include flexbox(flex, column, null, null);
+    padding: 20px;
+    text-align: center;
+    .clientes-div-main-container-uno {
+        width: 100%;
+        @include flexbox(flex, null, null, center);
+        div {
+            width: 500px;
+            @include flexbox(flex, column, center, start);
+            padding: 10px;
+            margin: 10px;
+            img {
+                width: 450px;
+                height: 250px;
+                border-radius: 10px;
+                @include mq990 {
+                    width: 350px;
+                }
+                @include mq800 {
+                    width: 650px;
+                    height: 370px;
+                }
+                @include mq650 {
+                    width: 450px;
+                    height: 300px;
+                }
+                @include mq500 {
+                    width: 350px;
+                    height: 200px;
+                }
+                @include mq375 {
+                    width: 250px;
+                    height: 150px;
+                }
+            }
+            p{
+                padding: 15px;
+            }
+            @include mq990 {
+                width: 400px;
+            }
+            @include mq800 {
+                width: 700px;
+            }
+            @include mq650{
+                width: 500px;
+            }
+            @include mq500{
+                width: 400px;
+            }
+            @include mq375{
+                width: 300px;
+            }
+        }
+        @include mq800 {
+            @include flexbox(null, column, center, null);
+        }
+    }
+    .clientes-div-main-container-dos {
+        @include flexbox(flex, null, null, center);
+        div {
+            width: 500px;
+            @include flexbox(flex, column, center, start);
+            padding: 10px;
+            margin: 10px;
+            img {
+                width: 450px;
+                height: 250px;
+                border-radius: 10px;
+                @include mq990 {
+                    width: 350px;
+                }
+                @include mq800 {
+                    width: 650px;
+                    height: 370px;
+                }
+                @include mq650 {
+                    width: 450px;
+                    height: 300px;
+                }
+                @include mq500 {
+                    width: 350px;
+                    height: 200px;
+                }
+                @include mq375 {
+                    width: 250px;
+                    height: 150px;
+                }
+            }
+            p{
+                padding: 15px;
+            }
+            @include mq990 {
+                width: 400px;
+            }
+            @include mq800 {
+                width: 700px;
+            }
+            @include mq650{
+                width: 500px;
+            }
+            @include mq500{
+                width: 400px;
+            }
+            @include mq375{
+                width: 300px;
+            }
+        }
+        @include mq800 {
+            @include flexbox(null, column, center, null);
+        }
+    }
+    
+}

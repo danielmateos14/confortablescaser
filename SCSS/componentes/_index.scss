@@ -1,0 +1,451 @@
+// Hero Section
+.index-hero-section {
+  height: calc(100vh - 100px);
+  @include flexbox(flex, column, center, null);
+
+  .hero {
+    background-color: nth($colores, 1);
+    height: calc(100vh - 100px);
+    @include flexbox(flex, column, center, null);
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      object-fit: cover;
+      @include flexbox(flex, column, center, center);
+    }
+
+    .hero-text-container {
+      position: absolute;
+      top: 80px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      @include flexbox(flex, column, center, center);
+
+      h2 {
+        color: nth($colores, 2);
+        font-size: 60px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        @include mq740 {
+          font-size: 40px;
+        }
+        @include mq485 {
+          font-size: 30px;
+        }
+      }
+    }
+
+    input {
+      width: 160px;
+      height: 50px;
+      border-radius: 5px;
+      background-color: nth($colores, 3);
+      color: nth($colores, 5);
+      font-size: 20px;
+      border: 1px solid nth($colores, 2);
+      margin-top: 40px;
+
+      &:hover {
+        background-color: nth($colores, 4);
+        cursor: pointer;
+      }
+
+      &:active {
+        transform: scale(0.95);
+        background-color: nth($colores, 4);
+        transition: transform 0.1s ease;
+      }
+      @include mq485 {
+        width: 130px;
+        height: 40px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+/* main section*/
+.main-index-container {
+  background-color: nth($colores, 2);
+  @include flexbox(flex, column, center, center);
+  h1 {
+    margin-top: 25px;
+    @include mq500 {
+      font-size: 25px;
+    }
+  }
+
+  .main-content-container {
+    width: 60%;
+    @include flexbox(flex, null, center, center);
+    padding-bottom: 10px;
+    img {
+      width: 500px;
+      height: 250px;
+      @include mq990 {
+        width: 400px;
+        height: 200px;
+      }
+      @include mq740 {
+        width: 300px;
+        height: 150px;
+      }
+      @include mq500 {
+        width: 200px;
+        height: 150px;
+      }
+    }
+    @include mq990 {
+      width: 80%;
+    }
+    @include mq500 {
+      @include flexbox(null, column, null, null);
+    }
+  }
+}
+
+/* servicios*/
+.index-servicios {
+  @include flexbox(flex, null, null, center);
+  .servicios {
+    width: 80%;
+    @include flexbox(flex, column, center, center);
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 5px 5px nth($colores, 6);
+    .servicio-titulo {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-size: 30px;
+      color: nth($colores, 1);
+      padding: 15px;
+      hr {
+        border: 2px solid nth($colores, 4);
+      }
+    }
+    .servicio-parrafo {
+      @include flexbox(flex, null, null, null);
+      width: 60%;
+      padding: 20px;
+      color: nth($colores, 1);
+      hr {
+        height: 60px;
+        margin-right: 8px;
+        margin-top: 4px;
+        border: 2px solid nth($colores, 4);
+      }
+      p {
+        @include mq500 {
+          font-size: 12px;
+        }
+      }
+      @include mq990 {
+        @include flexbox(flex, null, null, null);
+        width: 80%;
+        padding: 20px;
+        color: nth($colores, 1);
+      }
+      @include mq500 {
+        @include flexbox(flex, null, null, null);
+        width: 100%;
+        padding: 20px;
+        color: nth($colores, 1);
+      }
+    }
+    .servicio-imagenes {
+      width: 100%;
+      @include flexbox(flex, null, null, center);
+      flex-wrap: wrap;
+      img {
+        width: 300px;
+        height: 250px;
+        margin: 55px;
+        border: 5px solid rgba(175, 0, 0, 0.454);
+        box-sizing: border-box;
+        box-shadow: 3px 5px 5px rgba(94, 94, 94, 0.859);
+
+        @include mq1100 {
+          width: 400px;
+          height: 250px;
+          margin: 35px;
+        }
+        @include mq650 {
+          width: 300px;
+          height: 200px;
+          margin: 15px;
+        }
+        @include mq500 {
+          width: 300px;
+          height: 200px;
+          margin: 15px;
+        }
+        @include mq414 {
+          width: 220px;
+          height: 150px;
+          margin: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* productos */
+.index-productos-main-container {
+  @include flexbox(flex, column, null, null);
+  .index-productos-main-h2 {
+    @include flexbox(flex, column, center, null);
+    padding: 30px;
+    h2 {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-size: 40px;
+    }
+    hr {
+      border: 2px solid nth($colores, 4);
+      width: 10%;
+    }
+  }
+  .index-producto-main-parrafo {
+    @include flexbox(flex, null, null, null);
+    width: 100%;
+    justify-content: center;
+    p {
+      width: 80%;
+    }
+    hr {
+      height: 70px;
+      margin-top: 4px;
+      margin-right: 5px;
+      border: 2px solid nth($colores, 3);
+    }
+  }
+  .index-productos-main-subcontainer {
+    @include flexbox(flex, null, null, center);
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+    div {
+      margin-top: -10px;
+      a {
+        img {
+          width: 600px;
+          height: 400px;
+          margin: 10px;
+          box-shadow: 3px 3px 5px rgb(177, 177, 177);
+          &:hover {
+            opacity: 0.9;
+          }
+          @include mq740 {
+            width: 450px;
+            height: 350px;
+            margin: 10px;
+            box-shadow: 3px 3px 5px nth($colores, 6);
+          }
+          @include mq500 {
+            width: 350px;
+            height: 250px;
+            margin: 15px;
+            box-shadow: 3px 3px 5px nth($colores, 6);
+          }
+          @include mq375 {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            box-shadow: 3px 3px 5px nth($colores, 6);
+          }
+        }
+      }
+    }
+  }
+}
+/* clientes */
+.clientes {
+  background-color: nth($colores, 1);
+  @include flexbox(flex, column, center, center);
+  h2 {
+    color: nth($colores, 5);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 40px;
+    padding: 20px;
+    @include mq414 {
+      font-size: 30px;
+      padding: 20px;
+    }
+  }
+  .clientes-tarjetas {
+    width: 100%;
+    @include flexbox(flex, null, center, center);
+    flex-wrap: wrap;
+    div {
+      @include flexbox(flex, column, center, center);
+      width: 400px;
+      padding: 15px;
+      position: relative;
+      img {
+        width: 350px;
+        height: 300px;
+        border: 1px solid rgb(132, 132, 132);
+        @include mq800 {
+          width: 550px;
+          height: 350px;
+        }
+        @include mq560 {
+          width: 450px;
+          height: 300px;
+        }
+        @include mq485 {
+          width: 400px;
+          height: 250px;
+        }
+        @include mq414 {
+          width: 330px;
+          height: 200px;
+        }
+        @include mq375 {
+          width: 280px;
+          height: 200px;
+        }
+      }
+    }
+    p {
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 25px;
+      color: nth($colores, 5);
+      background-color: nth($colores, 1);
+      position: absolute;
+      bottom: 0;
+      width: 88%;
+      text-align: center;
+
+      @include mq800 {
+        width: 550px;
+      }
+      @include mq560 {
+        width: 450px;
+      }
+
+      @include mq485 {
+        width: 400px;
+      }
+      @include mq414 {
+        width: 330px;
+      }
+      @include mq375 {
+        width: 280px;
+      }
+    }
+  }
+}
+
+/* Flyer */
+.flyer {
+  @include flexbox(flex, column, center, null);
+  h2 {
+    font-size: 50px;
+    padding: 20px;
+    @include mq990 {
+      font-size: 40px;
+    }
+    @include mq740 {
+      font-size: 30px;
+    }
+    @include mq560 {
+      font-size: 25px;
+    }
+    @include mq500 {
+      font-size: 20px;
+    }
+    @include mq375 {
+      font-size: 18px;
+    }
+  }
+  .flyer-container {
+    width: 100%;
+    height: 100%;
+    @include flexbox(flex, null, center, center);
+    .flyer-image {
+      width: 800px;
+      height: 300px;
+      margin: 50px;
+
+    //Animacion
+    border: 3px solid nth($colores, 4);
+    text-align: center;
+    font-size: 24px;
+    color: nth($colores, 2);
+    background-color: nth($colores, 2);
+    animation: neon-border 1.5s infinite alternate;
+    @keyframes neon-border {
+      0% {
+        box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red;
+        border-color: nth($colores, 4);
+      }
+      50% {
+        box-shadow: 0 0 10px nth($colores, 3), 0 0 20px nth($colores, 3), 0 0 30px nth($colores, 3), 0 0 40px nth($colores, 3), 0 0 50px nth($colores, 3);
+        border-color: nth($colores, 3);
+      }
+      100% {
+        box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red;
+        border-color: nth($colores, 4);
+      }
+    }
+    // Animacion
+      @include mq1100 {
+        width: 600px;
+      }
+      @include mq990 {
+        width: 500px;
+      }
+      @include mq740 {
+        width: 550px;
+        height: 200px;
+      }
+      @include mq560 {
+        width: 400px;
+        height: 200px;
+      }
+      @include mq500 {
+        width: 350px;
+        height: 150px;
+      }
+      @include mq375 {
+        width: 350px;
+        height: 150px;
+      }
+    }
+    div {
+      @include flexbox(flex, column, center, center);
+      .whatsapp-icon {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+      }
+      .whatsapp-input {
+        width: 150px;
+        height: 40px;
+        background-color: green;
+        border-radius: 7px;
+        color: nth($colores, 5);
+        padding: 5px;
+        border: 1px solid nth($colores, 2);
+        &:hover {
+          background-color: nth($colores, 4);
+          cursor: pointer;
+        }
+        &:active {
+          transform: scale(0.95);
+          background-color: nth($colores, 4);
+          transition: transform 0.1s ease;
+        }
+      }
+      @include mq740 {
+        display: none;
+      }
+    }
+  }
+}
