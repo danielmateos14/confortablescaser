@@ -53,6 +53,8 @@
       &:hover {
         background-color: nth($colores, 4);
         cursor: pointer;
+        transform: scale(1.03);
+        transition: transform 0.2s ease;
       }
 
       &:active {

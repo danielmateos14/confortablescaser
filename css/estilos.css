@@ -75,6 +75,10 @@ footer {
         footer .footer-main .sugerencias input:hover {
           background-color: #620000;
           cursor: pointer; }
+        footer .footer-main .sugerencias input:active {
+          transform: scale(0.95);
+          background-color: #620000;
+          transition: transform 0.1s ease; }
         @media screen and (max-width: 990px) {
           footer .footer-main .sugerencias input {
             width: 90px;
@@ -104,6 +108,9 @@ footer {
         display: inline-block;
         width: 80px;
         padding: 5px; }
+        footer .footer-main .redes img:hover {
+          transform: scale(1.2);
+          transition: transform 0.5s ease; }
         @media screen and (max-width: 990px) {
           footer .footer-main .redes img {
             width: 60px;
@@ -238,7 +245,9 @@ footer {
       margin-top: 40px; }
       .index-hero-section .hero button:hover {
         background-color: #620000;
-        cursor: pointer; }
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: transform 0.2s ease; }
       .index-hero-section .hero button:active {
         transform: scale(0.95);
         background-color: #620000;

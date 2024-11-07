@@ -38,6 +38,11 @@ footer {
           background-color: nth($colores, 4);
           cursor: pointer;
         }
+        &:active {
+          transform: scale(0.95);
+          background-color: nth($colores, 4);
+          transition: transform 0.1s ease;
+        }
         @include mq990 {
           width: 90px;
           font-size: 11px;
@@ -67,6 +72,10 @@ footer {
         display: inline-block;
         width: 80px;
         padding: 5px;
+        &:hover {
+          transform: scale(1.2);
+          transition: transform 0.5s ease;
+        }
         @include mq990 {
           width: 60px;
           padding: 5px;
